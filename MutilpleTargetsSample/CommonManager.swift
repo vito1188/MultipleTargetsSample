@@ -17,6 +17,7 @@ class CommonManager: CommonProtocol {
 	#else
 	#endif
 	func commonOperation() {
-		print("common")
+		let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+		print("common - bundleID: \(appVersion)")
 	}
 }
